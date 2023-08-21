@@ -45,6 +45,14 @@
 
     <div>
       <h1>Тема 1</h1>
+      <h2>Пример по теме</h2>
+
+      <ngx-codemirror #codemirror
+                      [options]="codeMirrorOptions"
+                      [(ngModel)]="query"
+                      (ngModelChange)="setEditorContent($event)">
+      </ngx-codemirror>
+
       <h2>Основные материалы</h2>
       <button
         tuiButton
