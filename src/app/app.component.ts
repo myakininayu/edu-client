@@ -71,4 +71,12 @@ export class AppComponent {
   onBuggerClick() {
     this.isBurgerOpen=!this.isBurgerOpen;
   }
+
+  onClickMain() {
+
+  }
+
+  onClickExtra() {
+
+  }
 }
