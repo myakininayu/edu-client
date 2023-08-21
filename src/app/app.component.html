@@ -1,5 +1,19 @@
 <tui-root>
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
+
+  <tui-app-bar class="black">
+    <button
+      tuiIconButton
+      tuiSlot="left"
+      icon="tuiIconMenuLarge"
+      title="Menu"
+    ></button>
+    <div class="coursesContainer">
+      <div class="coursesItem"><a><span class="white">C++</span></a></div>
+      <div class="coursesItem"><a><span class="white">Python</span></a></div>
+    </div>
+
+  </tui-app-bar>
 
 </tui-root>
