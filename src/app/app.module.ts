@@ -3,7 +3,7 @@ import {
   TuiRootModule,
   TuiDialogModule,
   TuiAlertModule,
-  TUI_SANITIZER, TuiButtonModule
+  TUI_SANITIZER, TuiButtonModule, TuiSvgModule
 } from "@taiga-ui/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
@@ -11,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {TuiAvatarModule} from "@taiga-ui/kit";
+import {TuiAvatarModule, TuiTreeModule} from "@taiga-ui/kit";
 import {TuiAppBarModule} from "@taiga-ui/addon-mobile";
 
 @NgModule({
@@ -26,7 +26,9 @@ import {TuiAppBarModule} from "@taiga-ui/addon-mobile";
     TuiDialogModule,
     TuiAlertModule,
     TuiAppBarModule,
-    TuiButtonModule
+    TuiButtonModule,
+    TuiTreeModule,
+    TuiSvgModule
   ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
