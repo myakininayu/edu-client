@@ -15,10 +15,12 @@ import { TuiAvatarModule, TuiTreeModule } from "@taiga-ui/kit";
 import { TuiAppBarModule } from "@taiga-ui/addon-mobile";
 import { CodemirrorModule } from "@ctrl/ngx-codemirror";
 import { FormsModule } from '@angular/forms';
+import { CodeEditorComponent } from './core/code-editor/code-editor.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CodeEditorComponent
   ],
   imports: [
     BrowserModule,

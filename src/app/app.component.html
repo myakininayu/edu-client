@@ -47,11 +47,7 @@
       <h1>Тема 1</h1>
       <h2>Пример по теме</h2>
 
-      <ngx-codemirror #codemirror
-                      [options]="codeMirrorOptions"
-                      [(ngModel)]="query"
-                      (ngModelChange)="setEditorContent($event)">
-      </ngx-codemirror>
+      <app-code-editor [lang]="'python'" [code]='code'></app-code-editor>
 
       <h2>Основные материалы</h2>
       <button
