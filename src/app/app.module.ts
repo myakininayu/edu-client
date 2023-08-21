@@ -15,10 +15,18 @@ import { TuiAvatarModule, TuiTreeModule } from "@taiga-ui/kit";
 import { TuiAppBarModule } from "@taiga-ui/addon-mobile";
 import { CodemirrorModule } from "@ctrl/ngx-codemirror";
 import { FormsModule } from '@angular/forms';
+import { CppCourseComponent } from './components/cpp-course/cpp-course.component';
+import { PythonCourseComponent } from './components/python-course/python-course.component';
+import { MainPageComponent } from './components/main-page/main-page.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CppCourseComponent,
+    PythonCourseComponent,
+    MainPageComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

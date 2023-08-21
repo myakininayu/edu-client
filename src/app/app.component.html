@@ -1,82 +1,82 @@
 <tui-root>
 
-  <router-outlet></router-outlet>
+  <router-outlet>
 
-  <tui-app-bar class="black">
-    <button
-      tuiIconButton
-      tuiSlot="left"
-      icon="tuiIconMenuLarge"
-      title="Menu"
-      (click)="onBuggerClick()"
-    ></button>
-    <div class="coursesContainer">
-      <div class="coursesItem"><a><span class="white">C++</span></a></div>
-      <div class="coursesItem"><a><span class="white">Python</span></a></div>
-    </div>
-
-  </tui-app-bar>
-
-  <div class="mainContainer">
-    <tui-tree
-      class="navBar gray"
-      *ngIf="isBurgerOpen"
-      [tuiTreeController]="true"
-      [value]="data"
-      [content]="content"
-      [childrenHandler]="handler"
-    ></tui-tree>
-    <ng-template
-      #content
-      let-value
-      let-node="node"
-    >
-      <div
-        class="wrapper"
-        [style.opacity]=1
-      >
-        <tui-svg
-          *ngIf="value.icon"
-          [src]="value.icon"
-        ></tui-svg>
-        {{ value.text }}
+    <tui-app-bar class="black">
+      <button
+        tuiIconButton
+        tuiSlot="left"
+        icon="tuiIconMenuLarge"
+        title="Menu"
+        (click)="onBuggerClick()"
+      ></button>
+      <div class="coursesContainer">
+        <div class="coursesItem"><a routerLink="/cpp"><span class="white">C++</span></a></div>
+        <div class="coursesItem"><a routerLink="/python"><span class="white">Python</span></a></div>
       </div>
-    </ng-template>
 
-    <div>
-      <h1>Тема 1</h1>
-      <h2>Пример по теме</h2>
+    </tui-app-bar>
 
-      <ngx-codemirror #codemirror
-                      [options]="codeMirrorOptions"
-                      [(ngModel)]="query"
-                      (ngModelChange)="setEditorContent($event)">
-      </ngx-codemirror>
-
-      <h2>Основные материалы</h2>
-      <button
-        tuiButton
-        type="button"
-        appearance="primary"
-        class="tui-space_right-3 tui-space_bottom-3"
-        tuiSlot="right"
-        (click)="onClickMain()"
+    <div class="mainContainer">
+      <tui-tree
+        class="navBar gray"
+        *ngIf="isBurgerOpen"
+        [tuiTreeController]="true"
+        [value]="data"
+        [content]="content"
+        [childrenHandler]="handler"
+      ></tui-tree>
+      <ng-template
+        #content
+        let-value
+        let-node="node"
       >
-        Добавить
-      </button>
-      <h2>Дополнительные</h2>
-      <button
-        tuiButton
-        type="button"
-        appearance="primary"
-        class="tui-space_right-3 tui-space_bottom-3"
-        (click)="onClickExtra()"
-        tuiSlot="right"
-      >
-        Добавить
-      </button>
+        <div
+          class="wrapper"
+          [style.opacity]=1
+        >
+          <tui-svg
+            *ngIf="value.icon"
+            [src]="value.icon"
+          ></tui-svg>
+          {{ value.text }}
+        </div>
+      </ng-template>
+
+      <div>
+        <h1>Тема 1</h1>
+        <h2>Пример по теме</h2>
+
+        <ngx-codemirror #codemirror
+                        [options]="codeMirrorOptions"
+                        [(ngModel)]="query"
+                        (ngModelChange)="setEditorContent($event)">
+        </ngx-codemirror>
+
+        <h2>Основные материалы</h2>
+        <button
+          tuiButton
+          type="button"
+          appearance="primary"
+          class="tui-space_right-3 tui-space_bottom-3"
+          tuiSlot="right"
+          (click)="onClickMain()"
+        >
+          Добавить
+        </button>
+        <h2>Дополнительные</h2>
+        <button
+          tuiButton
+          type="button"
+          appearance="primary"
+          class="tui-space_right-3 tui-space_bottom-3"
+          (click)="onClickExtra()"
+          tuiSlot="right"
+        >
+          Добавить
+        </button>
+      </div>
     </div>
-  </div>
 
-
+  </router-outlet>
 </tui-root>
