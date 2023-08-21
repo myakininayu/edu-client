@@ -24,7 +24,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CodeEditorComponent
+    CodeEditorComponent,
     AppComponent,
     CppCourseComponent,
     PythonCourseComponent,
