@@ -1,0 +1,13 @@
+<tui-app-bar class="black">
+  <button
+    tuiIconButton
+    tuiSlot="left"
+    icon="tuiIconMenuLarge"
+    title="Menu"
+    (click)="buttonService.onBuggerClick()"
+  ></button>
+  <div class="coursesContainer">
+    <div class="coursesItem"><a routerLink="/cpp"><span class="white">C++</span></a></div>
+    <div class="coursesItem"><a routerLink="/python"><span class="white">Python</span></a></div>
+  </div>
+</tui-app-bar>

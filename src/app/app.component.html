@@ -2,46 +2,11 @@
 
   <router-outlet>
 
-    <tui-app-bar class="black">
-      <button
-        tuiIconButton
-        tuiSlot="left"
-        icon="tuiIconMenuLarge"
-        title="Menu"
-        (click)="onBuggerClick()"
-      ></button>
-      <div class="coursesContainer">
-        <div class="coursesItem"><a routerLink="/cpp"><span class="white">C++</span></a></div>
-        <div class="coursesItem"><a routerLink="/python"><span class="white">Python</span></a></div>
-      </div>
-
-    </tui-app-bar>
+    <app-custom-bar></app-custom-bar>
 
     <div class="mainContainer">
-      <tui-tree
-        class="navBar gray"
-        *ngIf="isBurgerOpen"
-        [tuiTreeController]="true"
-        [value]="data"
-        [content]="content"
-        [childrenHandler]="handler"
-      ></tui-tree>
-      <ng-template
-        #content
-        let-value
-        let-node="node"
-      >
-        <div
-          class="wrapper"
-          [style.opacity]=1
-        >
-          <tui-svg
-            *ngIf="value.icon"
-            [src]="value.icon"
-          ></tui-svg>
-          {{ value.text }}
-        </div>
-      </ng-template>
+
+      <app-navbar></app-navbar>
 
       <div class="item">
         <h1>Тема 1</h1>

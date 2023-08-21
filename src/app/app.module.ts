@@ -20,6 +20,9 @@ import { CppCourseComponent } from './components/cpp-course/cpp-course.component
 import { PythonCourseComponent } from './components/python-course/python-course.component';
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AppBarComponent } from './core/app-bar/app-bar.component';
+import { BurgerLogicService } from './services/burgerLogic.service';
+import { NavbarComponent } from './core/navbar/navbar.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CppCourseComponent,
     PythonCourseComponent,
     MainPageComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AppBarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     FormsModule,
     CodemirrorModule
   ],
-  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
