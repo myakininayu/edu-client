@@ -1,1 +1,30 @@
-<p>python-course works!</p>
+<div class="item">
+  <h1>Тема 1</h1>
+  <h2>Пример по теме</h2>
+
+  <app-code-editor [lang]="'python'" [code]='code'></app-code-editor>
+
+  <h2>Основные материалы</h2>
+  <button
+    tuiButton
+    type="button"
+    appearance="black"
+    class="black tui-space_right-3 tui-space_bottom-3"
+    tuiSlot="right"
+    (click)="onClickMain()"
+  >
+    Добавить
+  </button>
+  <h2>Дополнительные</h2>
+  <button
+    tuiButton
+    type="button"
+    appearance="black"
+    class="black tui-space_right-3 tui-space_bottom-3"
+    (click)="onClickExtra()"
+    tuiSlot="right"
+  >
+    Добавить
+  </button>
+</div>
+

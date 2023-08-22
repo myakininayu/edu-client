@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class CppCourseComponent {
 
+  code =
+    `t = 5
+      print(t)
+      def func():
+      a = 1
+      b = 2
+      c = a + b
+      return c`;
+
+  onClickMain() {}
+
+  onClickExtra() {}
+
 }
