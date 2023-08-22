@@ -16,7 +16,7 @@ def func():
   c = a + b
   return c`;
 
-  onClickMain() {}
+  onClickMain() {console.log('click main')}
 
   onClickExtra() {}
 }

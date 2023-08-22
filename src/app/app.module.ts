@@ -22,7 +22,8 @@ import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppBarComponent } from './core/app-bar/app-bar.component';
 import { BurgerLogicService } from './services/burgerLogic.service';
-import { NavbarComponent } from './core/navbar/navbar.component'
+import { NavbarComponent } from './core/navbar/navbar.component';
+import { MainButtonComponent } from './core/main-button/main-button.component'
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NavbarComponent } from './core/navbar/navbar.component'
     MainPageComponent,
     NotFoundComponent,
     AppBarComponent,
-    NavbarComponent
+    NavbarComponent,
+    MainButtonComponent
   ],
   imports: [
     BrowserModule,
