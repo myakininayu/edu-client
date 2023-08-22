@@ -29,11 +29,16 @@ int main()
         text: 'Сентябрь',
         children: [
           {
-            text: 'Тема 1',
+            text: 'История языка С++',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 2',
+            text: 'Типы данных',
+            icon: 'tuiIconStar'
+
+          },
+          {
+            text: 'Переменные',
             icon: 'tuiIconStar'
 
           }
@@ -43,11 +48,11 @@ int main()
         text: 'Октябрь',
         children: [
           {
-            text: 'Тема 3',
+            text: 'Условные конструкции',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 4',
+            text: 'Циклы',
             icon: 'tuiIconStar'
 
           }
@@ -57,11 +62,11 @@ int main()
         text: 'Ноябрь',
         children: [
           {
-            text: 'Тема 5',
+            text: 'Функции',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 6',
+            text: 'Классы',
             icon: 'tuiIconStar'
 
           }

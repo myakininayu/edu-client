@@ -29,11 +29,11 @@ def func():
         text: 'Сентябрь',
         children: [
           {
-            text: 'Тема 11',
+            text: 'История языка Python',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 21',
+            text: 'Типы данных в языке Python',
             icon: 'tuiIconStar'
 
           }
@@ -43,11 +43,16 @@ def func():
         text: 'Октябрь',
         children: [
           {
-            text: 'Тема 3',
+            text: 'Переменные',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 4',
+            text: 'Действия с переменными',
+            icon: 'tuiIconStar'
+
+          },
+          {
+            text: 'Условные конструкции',
             icon: 'tuiIconStar'
 
           }
@@ -57,11 +62,11 @@ def func():
         text: 'Ноябрь',
         children: [
           {
-            text: 'Тема 5',
+            text: 'Циклы',
             icon: 'tuiIconStar',
           },
           {
-            text: 'Тема 6',
+            text: 'Функции',
             icon: 'tuiIconStar'
 
           }
