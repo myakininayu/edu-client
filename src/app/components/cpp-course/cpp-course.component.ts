@@ -7,14 +7,17 @@ import { Component } from '@angular/core';
 })
 export class CppCourseComponent {
 
+  readonly lang: string = 'c++';
+
   code =
-    `t = 5
-      print(t)
-      def func():
-      a = 1
-      b = 2
-      c = a + b
-      return c`;
+    `#include"iostream"
+int main()
+{
+  int a = 5;
+  int b = 8;
+  int res = a + b;
+  return 0;
+}`;
 
   onClickMain() {}
 
