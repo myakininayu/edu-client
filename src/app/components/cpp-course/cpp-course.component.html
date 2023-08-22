@@ -1,16 +1,19 @@
-<div class="item">
-  <h1>Тема 2</h1>
-  <h2>Пример по теме</h2>
+<div class="mainContainer">
+  <app-navbar [dataTree]="data" [handler]="handler"></app-navbar>
+  <div class="item">
+    <h1>Тема 2</h1>
+    <h2>Пример по теме</h2>
 
-  <app-code-editor [lang]='language' [code]='code'></app-code-editor>
+    <app-code-editor [lang]='language' [code]='code'></app-code-editor>
 
-  <h2>Основные материалы</h2>
+    <h2>Основные материалы</h2>
 
-  <app-main-button [text]="'Добавить'"></app-main-button>
+    <app-main-button [text]="'Добавить'"></app-main-button>
 
-  <h2>Дополнительные</h2>
+    <h2>Дополнительные</h2>
 
-  <app-main-button [text]="'Добавить'"></app-main-button>
+    <app-main-button [text]="'Добавить'"></app-main-button>
+  </div>
 </div>
 
 
