@@ -1,6 +1,4 @@
-import {Component, Input} from '@angular/core';
-import {EMPTY_ARRAY, TuiHandler} from "@taiga-ui/cdk";
-import {TreeNode} from "./interfaces/treeNode";
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,37 +7,5 @@ import {TreeNode} from "./interfaces/treeNode";
 })
 export class AppComponent {
   title = 'edu-client';
-
-
-
-  readonly handler: TuiHandler<TreeNode, readonly TreeNode[]> = item =>
-    item.children || EMPTY_ARRAY;
-
-
-
-  onClickMain() {
-
-  }
-
-  onClickExtra() {
-
-  }
-
-
-  code =
-    `t = 5
-      print(t)
-      def func():
-      a = 1
-      b = 2
-      c = a + b
-      return c`;
-
-  ngOnInit() {
-
-
-
-  }
-
 
 }
