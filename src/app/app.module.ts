@@ -11,7 +11,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TuiAvatarModule, TuiTreeModule } from "@taiga-ui/kit";
+import {TuiAvatarModule, TuiBreadcrumbsModule, TuiTreeModule} from "@taiga-ui/kit";
 import { TuiAppBarModule } from "@taiga-ui/addon-mobile";
 import { CodemirrorModule } from "@ctrl/ngx-codemirror";
 import { FormsModule } from '@angular/forms';
@@ -23,7 +23,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppBarComponent } from './core/app-bar/app-bar.component';
 import { BurgerLogicService } from './services/burgerLogic.service';
 import { NavbarComponent } from './core/navbar/navbar.component';
-import { MainButtonComponent } from './core/main-button/main-button.component'
+import { MainButtonComponent } from './core/main-button/main-button.component';
+import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MainButtonComponent } from './core/main-button/main-button.component'
     NotFoundComponent,
     AppBarComponent,
     NavbarComponent,
-    MainButtonComponent
+    MainButtonComponent,
+    BreadcrumbsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ import { MainButtonComponent } from './core/main-button/main-button.component'
     TuiTreeModule,
     TuiSvgModule,
     FormsModule,
-    CodemirrorModule
+    CodemirrorModule,
+    TuiBreadcrumbsModule
   ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
