@@ -1,11 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {EMPTY_ARRAY, TuiHandler} from "@taiga-ui/cdk";
-
-interface TreeNode {
-  readonly text: string;
-  readonly icon?: string;
-  readonly children?: readonly TreeNode[];
-}
+import {TreeNode} from "./interfaces/treeNode";
 
 @Component({
   selector: 'app-root',
