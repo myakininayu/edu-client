@@ -31,6 +31,5 @@ export class CodeEditorComponent implements OnChanges{
 
   setEditorContent(event: any) {
     // console.log('Вы изменили код!');
-    console.log(this.lang)
   }
 }
