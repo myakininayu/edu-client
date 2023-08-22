@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class CppCourseComponent {
 
-  readonly lang: string = 'c++';
+  readonly language: string = 'text/x-c++src';
 
   code =
     `#include"iostream"

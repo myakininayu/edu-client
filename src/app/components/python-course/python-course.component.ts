@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class PythonCourseComponent {
 
+  language: string = 'python';
+
   code =
     `t = 5
 print(t)

@@ -1,14 +1,20 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
+import 'codemirror/mode/python/python';
+import 'codemirror/mode/clike/clike';
 
 @Component({
   selector: 'app-code-editor',
   templateUrl: './code-editor.component.html',
   styleUrls: ['./code-editor.component.less']
 })
-export class CodeEditorComponent {
+export class CodeEditorComponent implements OnChanges{
 
   @Input() lang!: string;
   @Input() code!: string;
+
+  ngOnChanges() {
+    this.codeMirrorOptions.mode = this.lang;
+  }
 
   codeMirrorOptions: any = {
     mode: this.lang,
@@ -25,5 +31,6 @@ export class CodeEditorComponent {
 
   setEditorContent(event: any) {
     // console.log('Вы изменили код!');
+    console.log(this.lang)
   }
 }
