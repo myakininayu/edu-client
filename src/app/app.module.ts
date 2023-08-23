@@ -3,7 +3,7 @@ import {
   TuiRootModule,
   TuiDialogModule,
   TuiAlertModule,
-  TUI_SANITIZER, TuiButtonModule, TuiSvgModule
+  TUI_SANITIZER, TuiButtonModule, TuiSvgModule, TuiHintModule
 } from "@taiga-ui/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
@@ -24,7 +24,10 @@ import { AppBarComponent } from './core/app-bar/app-bar.component';
 import { BurgerLogicService } from './services/burgerLogic.service';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { MainButtonComponent } from './core/main-button/main-button.component';
-import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component'
+import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component';
+import { PieComponent } from './core/charts/pie/pie.component'
+import {TuiPieChartModule} from "@taiga-ui/addon-charts";
+import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
 
 @NgModule({
   declarations: [
@@ -38,23 +41,27 @@ import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component'
     AppBarComponent,
     NavbarComponent,
     MainButtonComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    PieComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        TuiRootModule,
-        TuiDialogModule,
-        TuiAlertModule,
-        TuiAppBarModule,
-        TuiButtonModule,
-        TuiTreeModule,
-        TuiSvgModule,
-        FormsModule,
-        CodemirrorModule,
-        TuiBreadcrumbsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    TuiRootModule,
+    TuiDialogModule,
+    TuiAlertModule,
+    TuiAppBarModule,
+    TuiButtonModule,
+    TuiTreeModule,
+    TuiSvgModule,
+    FormsModule,
+    CodemirrorModule,
+    TuiBreadcrumbsModule,
+    TuiPieChartModule,
+    TuiMoneyModule,
+    TuiHintModule
+  ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
 })
