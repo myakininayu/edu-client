@@ -29,6 +29,15 @@ export class CodeEditorComponent implements OnChanges{
     lint: true
   };
 
+  copyCode() {
+    const input = document.createElement('textarea');
+    input.value = this.code;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+  }
+
   setEditorContent(event: any) {
     // console.log('Вы изменили код!');
   }
