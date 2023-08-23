@@ -1,6 +1,7 @@
-import {Component, Input, OnChanges} from '@angular/core';
+import {Component, Input, OnChanges, ViewChild} from '@angular/core';
 import 'codemirror/mode/python/python';
 import 'codemirror/mode/clike/clike';
+import {tuiIconCopyLarge} from "@taiga-ui/icons";
 
 @Component({
   selector: 'app-code-editor',
@@ -29,16 +30,20 @@ export class CodeEditorComponent implements OnChanges{
     lint: true
   };
 
+  @ViewChild('codemirror') codemirror: any;
+
   copyCode() {
-    const input = document.createElement('textarea');
-    input.value = this.code;
-    document.body.appendChild(input);
-    input.select();
-    document.execCommand('copy');
-    document.body.removeChild(input);
+    const code = this.codemirror.codeMirror.getValue();
+    navigator.clipboard.writeText(code).then(() => {
+      console.log('Код скопирован!');
+    }, (error) => {
+      console.error('Не удалось скопировать код:', error);
+    });
   }
 
   setEditorContent(event: any) {
     // console.log('Вы изменили код!');
   }
+
+  protected readonly tuiIconCopyLarge = tuiIconCopyLarge;
 }

@@ -1,8 +1,14 @@
-<button (click)="copyCode()">Копировать код</button>
-<ngx-codemirror #codemirror
-                class="codemirror"
-                [options]="codeMirrorOptions"
-                [(ngModel)]="code"
-                (ngModelChange)="setEditorContent($event)">
-</ngx-codemirror>
-
+<div class="editor-container">
+  <ngx-codemirror #codemirror
+                  class="codemirror"
+                  [options]="codeMirrorOptions"
+                  [(ngModel)]="code"
+                  (ngModelChange)="setEditorContent($event)">
+  </ngx-codemirror>
+  <button tuiIconButton
+          appearance="icon"
+          [icon]='tuiIconCopyLarge'
+          (click)="copyCode()"
+  >
+  </button>
+</div>
