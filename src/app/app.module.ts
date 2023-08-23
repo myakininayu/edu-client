@@ -40,21 +40,21 @@ import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component'
     MainButtonComponent,
     BreadcrumbsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    TuiRootModule,
-    TuiDialogModule,
-    TuiAlertModule,
-    TuiAppBarModule,
-    TuiButtonModule,
-    TuiTreeModule,
-    TuiSvgModule,
-    FormsModule,
-    CodemirrorModule,
-    TuiBreadcrumbsModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        TuiRootModule,
+        TuiDialogModule,
+        TuiAlertModule,
+        TuiAppBarModule,
+        TuiButtonModule,
+        TuiTreeModule,
+        TuiSvgModule,
+        FormsModule,
+        CodemirrorModule,
+        TuiBreadcrumbsModule
+    ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
 })
