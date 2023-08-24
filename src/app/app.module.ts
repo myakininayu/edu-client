@@ -28,6 +28,7 @@ import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component';
 import { PieComponent } from './core/charts/pie/pie.component'
 import {TuiPieChartModule} from "@taiga-ui/addon-charts";
 import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
     TuiBreadcrumbsModule,
     TuiPieChartModule,
     TuiMoneyModule,
-    TuiHintModule
+    TuiHintModule,
+    HttpClientModule
   ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
