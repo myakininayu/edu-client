@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { BurgerLogicService } from '../../services/burgerLogic.service'
 
 @Component({
   selector: 'app-custom-bar',
@@ -7,8 +6,4 @@ import { BurgerLogicService } from '../../services/burgerLogic.service'
   styleUrls: ['./app-bar.component.less']
 })
 export class AppBarComponent {
-
-  constructor(public buttonService: BurgerLogicService) {
-  }
-
 }

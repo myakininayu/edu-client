@@ -1,6 +1,5 @@
 import {Component, Input} from '@angular/core';
 import {EMPTY_ARRAY, TuiHandler} from "@taiga-ui/cdk";
-import { BurgerLogicService } from '../../services/burgerLogic.service'
 
 interface TreeNode {
   readonly text: string;
@@ -18,6 +17,4 @@ export class NavbarComponent {
   @Input() dataTree!: TreeNode;
   @Input() handler!: TuiHandler<TreeNode, readonly TreeNode[]>;
 
-  constructor(public buttonService: BurgerLogicService) {
-  }
 }

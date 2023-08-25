@@ -1,17 +1,10 @@
-<tui-app-bar class="fixed black">
+<tui-app-bar class="sticky black">
   <button
     tuiIconButton
     tuiSlot="left"
-    icon="tuiIconMenuLarge"
-    title="Menu"
-    (click)="buttonService.onBuggerClick()"
-  ></button>
+  ><a routerLink=""><img src="../../../assets/images/logo.png" alt="logo"></a></button>
   <div class="coursesContainer">
     <div class="coursesItem"><a routerLink="/cpp"><span class="white">C++</span></a></div>
     <div class="coursesItem"><a routerLink="/python"><span class="white">Python</span></a></div>
   </div>
-  <button
-    tuiIconButton
-    tuiSlot="right"
-  ><a routerLink=""><img src="../../../assets/images/logo.png" alt="logo"></a></button>
 </tui-app-bar>

@@ -21,7 +21,6 @@ import { PythonCourseComponent } from './components/python-course/python-course.
 import { MainPageComponent } from './components/main-page/main-page.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { AppBarComponent } from './core/app-bar/app-bar.component';
-import { BurgerLogicService } from './services/burgerLogic.service';
 import { NavbarComponent } from './core/navbar/navbar.component';
 import { MainButtonComponent } from './core/main-button/main-button.component';
 import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component';
@@ -69,7 +68,7 @@ import { LinkComponent } from './core/link/link.component';
     HttpClientModule,
     TuiLinkModule
   ],
-  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
