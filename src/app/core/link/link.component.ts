@@ -8,5 +8,6 @@ import {Component, Input} from '@angular/core';
 export class LinkComponent {
   @Input() text = '';
   @Input() href = '';
+  @Input() color = '';
   target = '_blank';
 }
