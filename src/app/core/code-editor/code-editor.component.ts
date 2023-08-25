@@ -1,7 +1,7 @@
 import {Component, Input, OnChanges, ViewChild} from '@angular/core';
 import 'codemirror/mode/python/python';
 import 'codemirror/mode/clike/clike';
-import {tuiIconCopyLarge} from "@taiga-ui/icons";
+import {tuiIconCopyLarge, tuiIconDeleteLarge} from "@taiga-ui/icons";
 
 @Component({
   selector: 'app-code-editor',
@@ -41,9 +41,16 @@ export class CodeEditorComponent implements OnChanges{
     });
   }
 
+  clearCode() {
+    this.codemirror.codeMirror.setValue("");
+    this.codemirror.codeMirror.clearHistory();
+    console.log('Код удален!');
+  }
+
   setEditorContent(event: any) {
-    // console.log('Вы изменили код!');
+    console.log('Вы изменили код!');
   }
 
   protected readonly tuiIconCopyLarge = tuiIconCopyLarge;
+  protected readonly tuiIconDeleteLarge = tuiIconDeleteLarge;
 }
