@@ -29,6 +29,7 @@ import { PieComponent } from './core/charts/pie/pie.component'
 import {TuiPieChartModule} from "@taiga-ui/addon-charts";
 import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
 import {HttpClientModule} from "@angular/common/http";
+import { FooterComponent } from './core/footer/footer.component';
 import { LinkComponent } from './core/link/link.component';
 
 @NgModule({
@@ -45,6 +46,7 @@ import { LinkComponent } from './core/link/link.component';
     MainButtonComponent,
     BreadcrumbsComponent,
     PieComponent,
+    FooterComponent,
     LinkComponent
   ],
   imports: [
