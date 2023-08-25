@@ -3,7 +3,7 @@ import {
   TuiRootModule,
   TuiDialogModule,
   TuiAlertModule,
-  TUI_SANITIZER, TuiButtonModule, TuiSvgModule, TuiHintModule
+  TUI_SANITIZER, TuiButtonModule, TuiSvgModule, TuiHintModule, TuiLinkModule
 } from "@taiga-ui/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from '@angular/core';
@@ -29,6 +29,7 @@ import { PieComponent } from './core/charts/pie/pie.component'
 import {TuiPieChartModule} from "@taiga-ui/addon-charts";
 import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
 import {HttpClientModule} from "@angular/common/http";
+import { LinkComponent } from './core/link/link.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import {HttpClientModule} from "@angular/common/http";
     NavbarComponent,
     MainButtonComponent,
     BreadcrumbsComponent,
-    PieComponent
+    PieComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ import {HttpClientModule} from "@angular/common/http";
     TuiPieChartModule,
     TuiMoneyModule,
     TuiHintModule,
-    HttpClientModule
+    HttpClientModule,
+    TuiLinkModule
   ],
   providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, BurgerLogicService],
   bootstrap: [AppComponent]
