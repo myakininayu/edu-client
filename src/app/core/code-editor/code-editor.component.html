@@ -6,16 +6,18 @@
                   (ngModelChange)="setEditorContent($event)"
   >
   </ngx-codemirror>
-  <button tuiIconButton
-          appearance="icon"
-          [icon]='tuiIconCopyLarge'
-          (click)="copyCode()"
-  >
-  </button>
-  <button tuiIconButton
-          appearance="icon"
-          [icon]='tuiIconDeleteLarge'
-          (click)="clearCode()"
-  >
-  </button>
+  <div class="tool-container">
+    <button tuiIconButton
+            appearance="icon"
+            [icon]='tuiIconDeleteLarge'
+            (click)="clearCode()"
+    >
+    </button>
+    <button tuiIconButton
+            appearance="icon"
+            [icon]='tuiIconCopyLarge'
+            (click)="copyCode()"
+    >
+    </button>
+  </div>
 </div>
