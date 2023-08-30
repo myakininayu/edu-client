@@ -25,11 +25,14 @@ import { NavbarComponent } from './core/navbar/navbar.component';
 import { MainButtonComponent } from './core/main-button/main-button.component';
 import { BreadcrumbsComponent } from './core/breadcrumbs/breadcrumbs.component';
 import { PieComponent } from './core/charts/pie/pie.component'
-import {TuiPieChartModule} from "@taiga-ui/addon-charts";
-import {TuiMoneyModule} from "@taiga-ui/addon-commerce";
-import {HttpClientModule} from "@angular/common/http";
+import {TuiPieChartModule } from "@taiga-ui/addon-charts";
+import { TuiMoneyModule } from "@taiga-ui/addon-commerce";
+import { HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './core/footer/footer.component';
 import { LinkComponent } from './core/link/link.component';
+import { EditPanelComponent } from "./core/edit-panel/edit-panel.component";
+import { ContentItemComponent } from './core/content-item/content-item.component';
+import { AddContentModalComponent } from './core/add-content-modal/add-content-modal.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +49,10 @@ import { LinkComponent } from './core/link/link.component';
     BreadcrumbsComponent,
     PieComponent,
     FooterComponent,
-    LinkComponent
+    LinkComponent,
+    EditPanelComponent,
+    ContentItemComponent,
+    AddContentModalComponent
   ],
   imports: [
     BrowserModule,
