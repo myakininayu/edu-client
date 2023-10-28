@@ -11,10 +11,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {TuiAvatarModule, TuiBreadcrumbsModule, TuiTreeModule} from "@taiga-ui/kit";
+import {
+  TuiAvatarModule,
+  TuiBreadcrumbsModule,
+  TuiDialogFormService,
+  TuiInputModule, TuiTextareaModule,
+  TuiTreeModule
+} from "@taiga-ui/kit";
 import { TuiAppBarModule } from "@taiga-ui/addon-mobile";
 import { CodemirrorModule } from "@ctrl/ngx-codemirror";
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CodeEditorComponent } from './core/code-editor/code-editor.component';
 import { CppCourseComponent } from './components/cpp-course/cpp-course.component';
 import { PythonCourseComponent } from './components/python-course/python-course.component';
@@ -32,7 +38,7 @@ import { FooterComponent } from './core/footer/footer.component';
 import { LinkComponent } from './core/link/link.component';
 import { EditPanelComponent } from "./core/edit-panel/edit-panel.component";
 import { ContentItemComponent } from './core/content-item/content-item.component';
-import { AddContentModalComponent } from './core/add-content-modal/add-content-modal.component';
+import { CreateContentComponent } from './core/create-content/create-content.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +58,7 @@ import { AddContentModalComponent } from './core/add-content-modal/add-content-m
     LinkComponent,
     EditPanelComponent,
     ContentItemComponent,
-    AddContentModalComponent
+    CreateContentComponent
   ],
   imports: [
     BrowserModule,
@@ -72,9 +78,12 @@ import { AddContentModalComponent } from './core/add-content-modal/add-content-m
     TuiMoneyModule,
     TuiHintModule,
     HttpClientModule,
-    TuiLinkModule
+    TuiLinkModule,
+    TuiInputModule,
+    ReactiveFormsModule,
+    TuiTextareaModule
   ],
-  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}],
+  providers: [{provide: TUI_SANITIZER, useClass: NgDompurifySanitizer}, CreateContentComponent, TuiDialogFormService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

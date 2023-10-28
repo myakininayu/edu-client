@@ -1,0 +1,28 @@
+<app-main-button text='Вставить' (click)="showDialog()"></app-main-button>
+
+<ng-template
+  let-observer
+  [tuiDialogOptions]="{label: 'Создание материала', size: 's'}"
+  [(tuiDialog)]="open"
+>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+
+    <tui-input formControlName="type">
+      Тип материала
+      <input
+        tuiTextfield
+        type="text"
+      />
+    </tui-input>
+
+    <tui-textarea formControlName="text">Текст материала</tui-textarea>
+
+
+    <button type="submit" [disabled]="form.invalid">Отправить</button>
+    <button type="button" (click)="onCancel()">Отменить</button>
+
+  </form>
+
+</ng-template>

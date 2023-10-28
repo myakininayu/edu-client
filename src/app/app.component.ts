@@ -1,4 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {LessonsService} from "./services/lessons.service";
+import {Observable} from "rxjs";
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,17 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
   title = 'edu-client';
+  // data: Observable<any>;
+  // lessonServ: LessonsService;
+
+  // constructor(lessonServ: LessonsService) {
+  //   this.lessonServ = lessonServ;
+  //
+  // }
+  //
+  // ngOnInit() {
+  //   this.data = this.lessonServ.getAll();
+  //   this.data.subscribe(value => console.log(value))
+  // }
 
 }

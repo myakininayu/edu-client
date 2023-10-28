@@ -1,15 +1,36 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {EMPTY_ARRAY, TuiHandler} from "@taiga-ui/cdk";
 import {TreeNode} from "../../interfaces/treeNode";
+import {Observable} from "rxjs";
+import {LessonsService} from "../../services/lessons.service";
 
 @Component({
   selector: 'app-python-course',
   templateUrl: './python-course.component.html',
   styleUrls: ['./python-course.component.less']
 })
-export class PythonCourseComponent {
+export class PythonCourseComponent implements OnInit{
 
   language: string = 'python';
+  dataCourse$: Observable<any>;
+  lessonServ: LessonsService;
+  courses: object[];
+
+
+  constructor(lessonServ: LessonsService) {
+    this.lessonServ = lessonServ;
+
+  }
+
+  ngOnInit() {
+    this.dataCourse$ = this.lessonServ.getAll();
+    this.dataCourse$.subscribe(value => {
+      console.log(value);
+      this.courses = value;
+      console.log(this.courses);
+    })
+  }
+
 
   code =
     `t = 5

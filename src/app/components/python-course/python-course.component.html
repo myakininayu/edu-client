@@ -18,6 +18,10 @@
       <h2>Дополнительные</h2>
       <app-pie></app-pie>
     </app-content-item>
+    <app-content-item *ngFor="let cours of courses">
+      <h3>{{cours.text}}</h3>
+    </app-content-item>
+
   </div>
 </div>
 
